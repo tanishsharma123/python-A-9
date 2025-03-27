@@ -1,0 +1,319 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "e651f5c1-0a00-4f8c-a3b0-ef9d00dff77e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#set\n",
+    "#set datatype\n",
+    "# unique element\n",
+    "# unordered\n",
+    "# and element\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "b798c045-619d-4648-8e01-8975ff5da900",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'set'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "myset=set({})\n",
+    "print(type(myset))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "6853571a-990b-4c94-9670-89b026510cf5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{40, 10, 20, 30}\n"
+     ]
+    }
+   ],
+   "source": [
+    "myset={10,20,30,40,10,10}\n",
+    "print(myset)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "97289b6d-19be-4296-8107-e1b8ee620155",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{40, 10, 'hey', 80, 20, 30}\n"
+     ]
+    }
+   ],
+   "source": [
+    "myset={10,20,30,40,10,10}\n",
+    "myset.add(80)\n",
+    "myset.add(\"hey\")\n",
+    "print(myset)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "7aa8fe14-593a-40c8-9392-e723adb437f3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'e', 40, 10, 'hey', 'y', 20, 'h', 30}\n"
+     ]
+    }
+   ],
+   "source": [
+    "myset={10,20,30,40,10,10}\n",
+    "myset.add(\"hey\")\n",
+    "myset.update(\"hey\")\n",
+    "print(myset)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "f4c8fdaf-59f9-47b3-a04c-db46b5b3ba9b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{10, 'y', 20, 30, 40, 'hey', 'h'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "myset={10,11,20,30,40,10,10}\n",
+    "myset.add(\"hey\")\n",
+    "myset.update(\"hey\")\n",
+    "myset.pop()\n",
+    "myset.remove(11)  \n",
+    "print(myset)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "5fad6064-8334-4f42-a717-d19f3a31624d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{50, 60, 'hey'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "myset1={10,20,30,40}\n",
+    "myset2={30,40,50,60,\"hey\"}\n",
+    "print(myset2.difference(myset1))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "29db731f-4a68-4fee-b62f-f96d8b64d06b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[4, 9, 16, 25, 36]"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#list comphersion,set dictionary.\n",
+    "[x**2 for x in range(2,7) ]      # [square in all eement]\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "05c18e52-9416-4181-a6e3-0847b0387ec4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{4: 1, 9: 1, 16: 1, 25: 1, 36: 1}\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1=[4,9,16,25,36]\n",
+    "mydict={}\n",
+    "for i in list1:  \n",
+    "    mydict[i]=1\n",
+    "print(mydict)    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "6827e7d2-f037-4d26-afb0-e705f911b0c1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{4: 1, 9: 1, 16: 1, 25: 1, 36: 1}\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1=[4,9,16,25,36]\n",
+    "mydict={i:1 for i in list1 }   # dictionary comprehension \n",
+    "print(mydict)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "cd542883-287c-42ba-97ab-ea6e18273d51",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{4, 36, 9, 16, 25}\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1=[4,9,16,25,36]\n",
+    "mydict={i for i in list1 }\n",
+    "print(mydict)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "id": "1381034d-5977-4ab7-bbb0-6a85ffa42bec",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[4, 9, 16, 25, 36]"
+      ]
+     },
+     "execution_count": 33,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "[x**2 for x in range(2,7)]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "1cb1dd22-0300-4671-9cb0-5a7bf50d8e01",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{(9, 1), (4, 1), (9, 2), (4, 2)}\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1=[4,9]\n",
+    "mydict={(i,j) for i in list1 for j in range(1,3)}\n",
+    "print(mydict)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "id": "53a75299-c586-4f47-a1e1-8fe7b9b862c5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[(1, 1), (1, 2), (1, 3), (1, 4), (2, 1), (2, 2), (2, 3), (2, 4), (3, 1), (3, 2), (3, 3), (3, 4)]\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1=[4,9]\n",
+    "mydict=[(i,j) for i in range(1,4) for j in range(1,5)]\n",
+    "print(mydict)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "98f8a1f5-288e-438b-903f-5e8f638a9c01",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "    "
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
